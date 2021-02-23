@@ -33,6 +33,4 @@ class PlaceAdapter(private val fragment: Fragment, private val placeList:List<Pl
         return placeList.size
     }
 
-
-
 }
