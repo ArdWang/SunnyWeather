@@ -14,7 +14,7 @@ import com.sunnyweather.android.ui.weather.WeatherActivity
 
 //import kotlinx.android.synthetic.main.place_item.view.*
 
-class PlaceAdapter(private val fragment: Fragment, private val placeList:List<Place>):
+class PlaceAdapter(private val fragment: PlaceFragment, private val placeList:List<Place>):
     RecyclerView.Adapter<PlaceAdapter.ViewHolder>() {
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val place = placeList[position]
@@ -38,7 +38,9 @@ class PlaceAdapter(private val fragment: Fragment, private val placeList:List<Pl
                 putExtra("location_lat", place.location.lat)
                 putExtra("place_name", place.name)
             }
+            fragment.viewModel.savePlace(place)
             fragment.startActivity(intent)
+            fragment.activity?.finish()
         }
         return holder
     }
