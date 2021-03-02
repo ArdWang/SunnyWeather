@@ -75,6 +75,7 @@ class WeatherActivity : AppCompatActivity() {
         forecastLayout.removeAllViews()
         val days = daily.skycon.size
 
+        // for循环 i=0;i<=days.count;i++
         for(i in 0 until days){
             val skycon = daily.skycon[i]
 
@@ -93,6 +94,7 @@ class WeatherActivity : AppCompatActivity() {
             temperatureInfo.text = tempText
             forecastLayout.addView(view)
         }
+
         // 填充life_index.xml布局中的数据
         val lifeIndex = daily.lifeIndex
         coldRiskText.text = lifeIndex.coldRisk[0].desc
