@@ -11,6 +11,7 @@ class WeatherViewModel: ViewModel() {
     private val locationLiveData = MutableLiveData<Location>()
 
     var locationLng = ""
+
     var locationLat = ""
 
     var placeName = ""
@@ -23,6 +24,5 @@ class WeatherViewModel: ViewModel() {
     fun refreshWeather(lng: String, lat: String){
         locationLiveData.value = Location(lng, lat)
     }
-
 
 }
