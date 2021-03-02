@@ -29,7 +29,7 @@ class PlaceFragment:Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_place,container,false)
+        return inflater.inflate(R.layout.fragment_place, container,false)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
@@ -78,7 +78,6 @@ class PlaceFragment:Fragment() {
                 result.exceptionOrNull()?.printStackTrace()
             }
         })
-
 
     }
 
