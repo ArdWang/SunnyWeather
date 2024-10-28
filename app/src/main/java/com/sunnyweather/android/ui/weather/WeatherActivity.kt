@@ -27,7 +27,7 @@ import java.util.*
 
 class WeatherActivity : AppCompatActivity() {
     //ViewModelProviders.of(this).get(WeatherViewModel::class.java)
-    private val viewModel by lazy { ViewModelProvider(this).get(WeatherViewModel::class.java) }
+    val viewModel by lazy { ViewModelProvider(this).get(WeatherViewModel::class.java) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

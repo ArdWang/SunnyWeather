@@ -33,6 +33,7 @@ class PlaceFragment:Fragment() {
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
+
         super.onActivityCreated(savedInstanceState)
 
         if (activity is MainActivity && viewModel.isPlaceSaved()){
